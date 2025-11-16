@@ -1,1 +1,146 @@
 /*  your css code here. If applicable */
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            font-family: 'Comic Sans MS', cursive;
+            letter-spacing: 2px;
+        }
+        
+        /* Name Input Screen */
+        .name-input {
+            display: block;
+        }
+        
+        .name-input.hidden {
+            display: none;
+        }
+        
+        .player-input {
+            margin-bottom: 20px;
+        }
+        
+        .player-input label {
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            width: 280px;
+        }
+        
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+        
+        #submit {
+            margin-top: 20px;
+            padding: 15px 60px;
+            font-size: 18px;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        #submit:hover {
+            background-color: #f0f0f0;
+        }
+        
+        /* Game Board Screen */
+        .game-board {
+            display: none;
+        }
+        
+        .game-board.active {
+            display: block;
+        }
+        
+        .message {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 125px);
+            grid-template-rows: repeat(3, 125px);
+            gap: 0;
+            margin: 0 auto;
+            border: 2px solid black;
+            width: fit-content;
+        }
+        
+        .cell {
+            width: 125px;
+            height: 125px;
+            background-color: #ffb6c1;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .cell:hover {
+            background-color: #ff9eaf;
+        }
+        
+        .cell.taken {
+            cursor: not-allowed;
+        }
+        
+        .cell.winning {
+            background-color: #9370db;
+        }
+        
+        .reset-btn {
+            margin-top: 30px;
+            padding: 12px 30px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .reset-btn:hover {
+            background-color: #45a049;
+        }
